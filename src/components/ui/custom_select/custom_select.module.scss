@@ -1,0 +1,17 @@
+.customSelect {
+  background-color: $color_pk1;
+  border: 2px solid $color_r1;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  min-width: 200px;
+
+  option {
+    color: $color_black;
+    cursor: pointer;
+  }
+
+  &:hover {
+    border-color: $color_black;
+  }
+}

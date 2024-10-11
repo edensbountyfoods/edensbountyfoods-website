@@ -1,0 +1,101 @@
+.Header {
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+
+  left: 0;
+  width: 100dvw;
+
+  .wrap {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+    align-items: center;
+
+    .logo {
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+
+  .right {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    .menuIcon {
+      height: 50px;
+      width: 50px;
+      background-color: $color_p2;
+      font-size: 50px;
+      border-radius: 50%;
+      @include flexCenter;
+      position: relative;
+      * {
+        color: $color_p1;
+      }
+      cursor: pointer;
+
+      .ico {
+        &:hover {
+          transform: scale(1.1);
+        }
+
+        transition-duration: 1s;
+
+        &.open {
+          transform: rotate(135deg);
+        }
+      }
+
+      .menu {
+        position: absolute;
+        background-color: white;
+        // left: -91px;
+        left: -210px;
+        top: 10px;
+        // z-index: -10;
+        border-radius: 30px;
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+        min-width: 250px;
+        background-color: $color_p2;
+        transform-origin: top right;
+        a {
+          font-size: 35px;
+        }
+        animation: 1s open;
+      }
+    }
+  }
+}
+
+@keyframes open {
+  0% {
+    transform: scale(0);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes close {
+  0% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(0);
+  }
+}
+
+@keyframes rotateForward {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(180deg);
+  }
+}

@@ -1,0 +1,55 @@
+.OurFlavours {
+  //   height: 160dvh;
+  background-image: url('/assets/forest_bg.jpg');
+  background-size: cover;
+  background-position: bottom;
+
+  .head {
+    h1 {
+      text-align: center;
+      font-size: 100px;
+      line-height: 100px;
+      color: $color_p3
+    }
+  }
+
+  .Product {
+    @include flexCenter;
+    flex-direction: column;
+
+    h4 {
+      font-size: 70px;
+      margin: 20px 0;
+    }
+
+    img {
+      height: 500px;
+    }
+  }
+
+  .btn {
+    background-color: white;
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    @include flexCenter;
+    font-size: 50px;
+    * {
+      color: black;
+    }
+  }
+
+  @include respond-below(md) {
+    .head {
+      h1 {
+        font-size: 70px;
+      }
+    }
+
+    .btn {
+      height: 50px;
+      width: 50px;
+      font-size: 35px;
+    }
+  }
+}

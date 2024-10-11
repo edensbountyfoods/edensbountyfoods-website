@@ -1,0 +1,82 @@
+.pageHead {
+  text-align: center;
+  position: relative;
+
+  .bg {
+    background-image: url("/images/page_head_pattern.jpg");
+    background-size: cover;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    opacity: 0.1;
+  }
+
+  .wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 10;
+
+    h1 {
+      padding-top: 250px;
+      font-weight: 800;
+      letter-spacing: 8px;
+    }
+
+    .text {
+      position: absolute;
+      left: 50%;
+      transform: translate(-50%, 0);
+      z-index: 10;
+    }
+
+    .caption {
+      letter-spacing: 8px;
+    }
+  }
+
+  &.v1 {
+    background-color: $color_p5;
+  }
+
+  &.v2 {
+    background-image: linear-gradient(white, rgb(186, 186, 186));
+  }
+  &.v3 {
+    background-image: linear-gradient(#262b25, #4c5b5e);
+    color: white;
+  }
+  &.v4 {
+    // background-image: linear-gradient(#262b25, #4c5b5e);
+    background-color: black;
+    color: white;
+  }
+  &.v5 {
+    background-image: linear-gradient(white, #f6cbd5);
+    // background-color: #d1b5aa;
+    // color: white;
+  }
+
+  @include respond-below(md) {
+    padding: 130px 0 70px 0;
+
+    .wrap {
+      .text {
+        position: inherit;
+       
+
+        h1 {
+          padding-top: 0;
+        }
+      }
+    }
+
+    img {
+      display: none;
+    }
+  }
+}

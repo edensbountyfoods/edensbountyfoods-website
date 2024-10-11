@@ -1,0 +1,123 @@
+.ShopScreen {
+  .wrap {
+    position: relative;
+
+    .bg {
+      background-image: url("/assets/zebra_bg.jpg");
+      background-size: cover;
+      opacity: 0.02;
+      position: absolute;
+      left: 0;
+      right: 0;
+      height: 100%;
+      width: 100%;
+      z-index: 1;
+    }
+
+    .cont {
+      display: flex;
+      height: 100dvh;
+      align-items: flex-end;
+      position: relative;
+      z-index: 2;
+
+      .bottom {
+        width: 100%;
+        justify-content: space-between;
+        display: flex;
+
+        .left {
+          text-align: center;
+          padding-bottom: 30px;
+          h3 {
+            font-size: 30px;
+            margin-bottom: 20px;
+          }
+        }
+
+        .right {
+          display: flex;
+          justify-content: flex-end;
+          flex-direction: column;
+          padding-bottom: 30px;
+        }
+
+        .op {
+          margin: 0 20px;
+          p {
+            text-align: center;
+            font-size: 24px;
+            margin-top: 10px;
+          }
+        }
+      }
+      h1 {
+        position: absolute;
+        font-size: 400px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -60%);
+      }
+
+      .mainImg {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) rotate(-14deg);
+        width: 250px;
+      }
+    }
+
+    @include respond-below(xl) {
+      .cont {
+        h1 {
+          font-size: 250px;
+        }
+
+        .mainImg {
+          width: 200px;
+        }
+      }
+    }
+    @include respond-below(lg) {
+      .cont {
+        h1 {
+          font-size: 200px;
+        }
+
+        .mainImg {
+          width: 150px;
+        }
+      }
+    }
+    @include respond-below(md) {
+      .cont {
+        h1 {
+          font-size: 170px;
+        }
+      }
+    }
+    @include respond-below(sm) {
+      .cont {
+        height: 120dvh;
+        .bottom {
+          flex-direction: column;
+          align-items: center;
+        }
+        h1 {
+          transform: translate(-50%, -180%);
+          font-size: 120px;
+        }
+
+        .mainImg {
+          width: 110px;
+          transform: translate(-50%, -120%) rotate(-14deg);
+        }
+      }
+    }
+  }
+}
+
+.blank {
+  min-height: 100dvh;
+}

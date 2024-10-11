@@ -1,0 +1,23 @@
+@import "~bootstrap/dist/css/bootstrap.min.css";
+
+/* @font-face {
+  font-family: "rock-well-bold";
+  src: local("rock-well-bold"), url("./fonts//Rockwell-Bold.ttf"), format("ttf");
+} */
+
+body {
+
+  * {
+    color: white;
+    box-sizing: border-box;
+    transition: 0.1s;
+
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth !important;
+  }
+}
+
+a {
+  text-decoration: none;
+}

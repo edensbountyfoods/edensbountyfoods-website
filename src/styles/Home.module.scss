@@ -1,0 +1,19 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap");
+
+.body {
+  background-color: $color_p1;
+
+  p,
+  input,
+  textarea {
+    font-family: "Manrope", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+
+    font-weight: 400 !important;
+  }
+
+  p {
+    font-size: 18px !important;
+  }
+}

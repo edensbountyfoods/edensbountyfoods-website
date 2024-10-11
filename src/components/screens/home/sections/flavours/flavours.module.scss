@@ -1,0 +1,46 @@
+.FlavoursSection {
+  .top {
+    text-align: center;
+
+    > div {
+      position: relative;
+      h1 {
+        font-size: 100px;
+      }
+
+      span {
+        position: absolute;
+        top: -5px;
+        font-size: 30px;
+        font-weight: 600;
+        left: 50%;
+        transform: translate(-50%, 0%) rotate(-8deg);
+        background-color: $color_p3;
+        line-height: 35px;
+        padding: 0px 16px;
+        border-radius: 5px;
+      }
+    }
+  }
+
+  .wrap {
+    display: flex;
+    gap: 50px;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 0 25px;
+
+    .flavour {
+      text-align: center;
+      position: relative;
+
+      p {
+        font-size: 30px;
+      }
+
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+}

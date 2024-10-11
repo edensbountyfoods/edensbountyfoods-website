@@ -1,0 +1,37 @@
+.custom_button {
+  // background-color: red;
+  padding: 5px 50px;
+  border: none;
+  border-radius: 40px;
+  font-size: 35px;
+  font-weight: 500;
+  height: fit-content !important;
+  border: 1px solid transparent;
+
+  &:disabled {
+    opacity: 0.7;
+  }
+
+  &.v_1 {
+    background-color: $color_p1;
+
+    &:hover {
+      background-color: white;
+      color: $color_p1;
+      border-color: $color_p1;
+    }
+  }
+  &.v_2 {
+    background-color: white;
+    color: $color_p1;
+
+    &:hover {
+      background-color: $color_p1;
+      color: white;
+    }
+  }
+
+  @include respond-below(md) {
+    font-size: 24px;
+  }
+}

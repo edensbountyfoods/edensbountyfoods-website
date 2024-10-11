@@ -1,0 +1,67 @@
+.BannerSection {
+  height: 140dvh;
+  z-index: 6;
+  background-image: linear-gradient(#00000075, #0000 11%),
+    url("/images/hero.png");
+  background-position: 0 0, 50% 65%;
+  background-repeat: repeat, no-repeat;
+  background-size: auto, cover;
+
+  .cont {
+    // text-align: center;
+    margin: auto;
+    padding-top: 120px;
+    width: fit-content;
+
+    h1 {
+      font-size: 120px;
+      line-height: 100px;
+      animation-fill-mode: forwards;
+      animation: 1.5s intro;
+    }
+
+    .l2 {
+      display: flex;
+      //   align-items: center;
+      button {
+        margin-top: 10px;
+        margin-right: 16px;
+      }
+    }
+
+    .btn2 {
+      display: none;
+    }
+
+    @include respond-below(md) {
+      padding-top: 200px;
+      .btn1 {
+        display: none;
+      }
+      .btn2 {
+        display: block;
+        button {
+          margin: 0;
+        }
+      }
+      h1 {
+        font-size: 70px;
+        line-height: 65px;
+      }
+
+      .l2 {
+        display: block;
+      }
+    }
+  }
+}
+
+@keyframes intro {
+  0% {
+    transform: rotateX(90deg);
+  }
+
+  100% {
+    transform: rotateX(0deg);
+  }
+}

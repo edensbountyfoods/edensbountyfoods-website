@@ -1,0 +1,131 @@
+.CartButton {
+  font-size: 30px;
+  cursor: pointer;
+  position: relative;
+  .bubble {
+    position: absolute;
+    right: -10px;
+    top: -10px;
+    background-color: $color_p3;
+    height: 30px;
+    width: 30px;
+    @include flexCenter;
+    border-radius: 50%;
+    p {
+      margin-top: 3px;
+    }
+  }
+  //   background-color: ;
+}
+
+.cartDrawer {
+  .head {
+    background-color: $color_p1;
+    font-weight: 800;
+
+    button[class="btn-close"] {
+      opacity: 1;
+      background-color: $color_p2;
+      border-radius: 50%;
+    }
+  }
+
+  .body {
+    position: relative;
+
+    .items {
+      max-height: calc(100dvh - 170px);
+      overflow: auto;
+    }
+
+    .checkout {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      border-top: 1px solid $color_p1;
+      width: 100%;
+      height: 100px;
+      overflow: hidden;
+      padding: 10px 20px;
+      background-color: white;
+
+      * {
+        color: $color_p1;
+        font-weight: 600;
+      }
+
+      .top {
+        display: flex;
+        justify-content: space-between;
+        font-size: 20px;
+      }
+
+      .btn {
+        background-color: $color_p3;
+        color: white;
+        @include flexCenter;
+        margin: 10px 0;
+        padding: 8px;
+        border-radius: 10px;
+        user-select: none;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.CartTItem {
+  display: flex;
+  margin: 20px 10px;
+  border-bottom: 1px solid $color_p1;
+  padding-bottom: 20px;
+  * {
+    color: black;
+  }
+  gap: 30px;
+
+  h1 {
+    font-weight: bold;
+    font-size: 30px;
+  }
+
+  p {
+    margin: 10px 0;
+  }
+
+  .count {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    p {
+      font-size: 20px;
+    }
+    > div {
+      height: 30px;
+      width: 30px;
+      @include flexCenter;
+      padding-bottom: 5px;
+      border-radius: 10px;
+      border: 1px solid $color_p3;
+      cursor: pointer;
+      user-select: none;
+
+      &.plus {
+        color: white;
+        background-color: $color_p3;
+      }
+
+      &.min {
+        color: $color_p3;
+      }
+    }
+  }
+}
+
+.empty {
+  color: $color_p1;
+  font-size: 20px;
+  line-height: 40px;
+  margin-top: 200px;
+  text-align: center;
+}
