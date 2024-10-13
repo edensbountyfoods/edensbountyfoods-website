@@ -44,7 +44,7 @@ const CardsSection = () => {
                 <div className={`${styles.card} ${styles.card1}`}>
                   <div>
                     <h2>TRY OUR WATERMELON BUNDLE</h2>
-                    <p>$44 per pack</p>
+                    {/* <p>$44 per pack</p> */}
                   </div>
 
                   <div>
@@ -64,7 +64,7 @@ const CardsSection = () => {
                 <div className={`${styles.card} ${styles.card2}`}>
                   <div>
                     <h2>TRY OUR WATERMELON BUNDLE</h2>
-                    <p>$44 per pack</p>
+                    {/* <p>$44 per pack</p> */}
                   </div>
 
                   <div>
