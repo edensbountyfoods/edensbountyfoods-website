@@ -41,6 +41,7 @@
     "react-slideshow-image": "^4.3.1",
     "react-social-media-embed": "^2.3.5",
     "reactjs-availability-calendar": "^1.1.7",
+    "sha256": "^0.2.0",
     "swiper": "^11.1.14",
     "uuid": "^10.0.0",
     "v4": "^0.0.1"
