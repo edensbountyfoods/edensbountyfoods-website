@@ -26,22 +26,7 @@ const CheckoutScreen = ({ cartItems, setCartItems }) => {
   let totalPrice = 0;
 
   const [isLoading, setIsLoading] = useState(false);
-  const [merchantTransactionId, setMerchantTrasactionId] = useState("");
-
-  useEffect(() => {
-    setMerchantTrasactionId(v4());
-  }, []);
-
-  // useEffect(() => {
-  //   if (typeof window !== "undefined") {
-  //     const url =; // Get full URL including domain
-  //     // setFullUrl(url);
-  //     console.log(url);
-  //   }
-  // }, []);
-
   const router = useRouter();
-  // console.log(router);
 
   if (cartItems?.[0]) {
     cartItems.forEach((item) => {
@@ -49,75 +34,21 @@ const CheckoutScreen = ({ cartItems, setCartItems }) => {
     });
   }
 
-  const PHONE_PE_HOST_URL = process.env.NEXT_PUBLIC_PHONE_PE_HOST_URL;
-  const MERCHANT_ID = process.env.NEXT_PUBLIC_MERCHANT_ID;
-  const SALT_INDEX = process.env.NEXT_PUBLIC_SALT_INDEX;
-  const SALT_KEY = process.env.NEXT_PUBLIC_SALT_KEY;
-  //
-  const payEndPoint = process.env.NEXT_PUBLIC_PAY_ENDPOINT;
-  const merchantUserId = process.env.NEXT_PUBLIC_MERCHANT_USER_ID;
-
   const placeOrder = async () => {
     setIsLoading(true);
 
-    const payload = {
-      merchantId: MERCHANT_ID,
-      merchantTransactionId: merchantTransactionId,
-      merchantUserId,
-      amount: totalPrice * 100,
-      // amount: 100000,
-      redirectUrl: `${window.location.href}/${merchantTransactionId}`,
-      redirectMode: "REDIRECT",
-      mobileNumber: "9999999999",
-      paymentInstrument: {
-        type: "PAY_PAGE",
-      },
-      shippingAddress: {
-        name: "John Doe",
-        addressLine1: "123 Street Name",
-        addressLine2: "Area Name",
-        city: "City",
-        state: "State",
-        postalCode: "123456",
-        country: "IN",
-        phone: "9876543210",
-      },
-    };
-
-    // SHA256(base64 encoded payload + “/pg/v1/pay” + salt key) + ### + salt index
-    const bufferObj = Buffer.from(JSON.stringify(payload), "utf-8");
-    const base64EncodedPayload = bufferObj.toString("base64");
-    const xVerify =
-      sha256(base64EncodedPayload + payEndPoint + SALT_KEY) +
-      "###" +
-      SALT_INDEX;
-
-    const options = {
-      method: "post",
-      url: `${PHONE_PE_HOST_URL}${payEndPoint}`,
-      headers: {
-        accept: "application/json",
-        "Content-Type": "application/json",
-        "X-VERIFY": xVerify,
-      },
-      data: {
-        request: base64EncodedPayload,
-      },
-    };
-    await axios
-      .request(options)
-      .then(function (response) {
-        // console.log(
-        //   response?.data?.data?.instrumentResponse?.redirectInfo?.url
-        // );
-        router.replace(
-          response?.data?.data?.instrumentResponse?.redirectInfo?.url
-        );
-      })
-      .catch(function (error) {
-        alert("Something went wrong");
-        console.error(error);
+    try {
+      const response = await axios.post("/api/payment/pay", {
+        amount: 1,
       });
+      console.log(response.data);
+
+      router.replace(
+        response?.data?.data?.instrumentResponse?.redirectInfo?.url
+      );
+    } catch (err) {
+      console.log(err.message);
+    }
 
     setIsLoading(false);
   };
