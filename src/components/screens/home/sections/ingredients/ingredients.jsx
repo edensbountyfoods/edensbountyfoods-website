@@ -16,33 +16,39 @@ const IngredientsSection = () => {
   const ingredients = [
     {
       id: "advsd",
-      name: "VITAMIN C",
-      img: "vitamin.avif",
-    },
-    {
-      id: "skfvks",
-      name: "VITAMIN C",
-      img: "vitamin.avif",
+      name: "FINEST LYCHEES",
+      img: "lychee.jpg",
+      text: "At Yaja, we use only the finest lychees, handpicked for their sweet, juicy flavor, adding a refreshing and natural taste to every sip of our drinks.",
     },
     {
       id: "spfkvsp",
-      name: "VITAMIN C",
-      img: "vitamin.avif",
+      name: "MALANAD'S PASSION FRUIT",
+      img: "passion_fruit.jpg",
+      text: "We select the finest passion fruits for Yaja, ensuring a bold, tangy flavor that’s full of nutrients, adding a refreshing tropical twist to every drink.",
+    },
+    {
+      id: "sdvnsjd",
+      name: "NATA DE COCO MADE FROM COCUONUT WATER",
+      img: "nata-de-coco.jpg",
+      text: "Made from fresh coconut water, the finest nata de coco adds a delightful chew and a burst of tropical flavor to every refreshing sip.",
     },
     {
       id: "wrofjwor",
-      name: "VITAMIN C",
-      img: "vitamin.avif",
+      name: "ALMOND GUMS - A BODY COOLANT",
+      img: "almond_resin.webp",
+      text: "Almond gums, known for their cooling properties, provide a natural way to refresh and hydrate the body, making every sip a soothing and revitalizing experience.",
     },
     {
       id: "dsvdfv",
-      name: "VITAMIN C",
-      img: "vitamin.avif",
+      name: "BASIL SEED",
+      img: "basil seeds.jpeg",
+      text: "Basil seeds offer benefits like improved digestion, hydration, weight management, rich antioxidants, anti-inflammatory properties, blood sugar regulation, and enhanced skin health, promoting overall wellness.",
     },
     {
       id: "sdvpsd",
-      name: "VITAMIN C",
-      img: "vitamin.avif",
+      name: "NO ARTIFICIAL COLORS OR FLAVOURS",
+      img: "no-artificial-flavors.webp",
+      text: "Our products contain no artificial colors or flavors, ensuring a natural taste and appearance, promoting health and wellness while prioritizing high-quality, wholesome ingredients.",
     },
   ];
 
@@ -55,11 +61,11 @@ const IngredientsSection = () => {
             <br />
             OUR INGREDIENTS
           </h1>
-          {/* <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorum
-            porro perspiciatis maiores quasi reprehenderit architecto
-            consectetur corporis ratione voluptatem dignissimos.
-          </p> */}
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta
+            ducimus possimus, beatae corporis doloribus fuga at quas velit.
+            Dolore, repellendus officia? Voluptates saepe alias maxime.
+          </p>
         </div>
       </CustomContainer>
       <br />
@@ -89,7 +95,7 @@ const IngredientsSection = () => {
             },
             1024: {
               slidesPerView: 3,
-              spaceBetween: 50,
+              spaceBetween: 70,
             },
           }}
           modules={[Navigation, Pagination, Autoplay]}
@@ -112,11 +118,7 @@ const IngredientsSection = () => {
                   </div>
                   <div className={styles.txt}>
                     <h1>{i.name}</h1>
-                    {/* <p>
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Aut ipsa neque nemo reprehenderit commodi praesentium ut
-                      accusantium repellat aliquid saepe.
-                    </p> */}
+                    <p>{i.text}</p>
                   </div>
                 </div>
               </SwiperSlide>

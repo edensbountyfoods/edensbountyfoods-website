@@ -58,7 +58,7 @@ const OurFlavours = ({ products }) => {
                     <div className={styles.Product}>
                       <h4
                         style={{
-                          color: f.color,
+                          // color: f.color,
                         }}
                       >
                         {f.name}

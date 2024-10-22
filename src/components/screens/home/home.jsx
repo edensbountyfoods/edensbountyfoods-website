@@ -12,7 +12,7 @@ const HomeScreen = ({ products }) => {
   return (
     <div>
       <BannerSection />
-      {/* <FlavoursSection products={products} /> */}
+      <FlavoursSection products={products} />
       <SpecsSection />
       <OurFlavours products={products} />
       <CardsSection />

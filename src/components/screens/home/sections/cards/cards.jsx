@@ -29,12 +29,12 @@ const CardsSection = () => {
       <CustomContainer>
         <CustomSection>
           <div className={styles.head}>
-            <h1>{"Elevate your game with focused energy".toUpperCase()}</h1>
-            {/* <p>
+            <h1>{"Elevate you snack with YAJA's Creations".toUpperCase()}</h1>
+            <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse
               molestias et voluptatibus perferendis impedit minus. Ipsa, dolor?
               Dolores, ex nam.
-            </p> */}
+            </p>
           </div>
 
           <br />
@@ -44,7 +44,7 @@ const CardsSection = () => {
                 <div className={`${styles.card} ${styles.card1}`}>
                   <div>
                     <h2>TRY OUR WATERMELON BUNDLE</h2>
-                    {/* <p>$44 per pack</p> */}
+                    <p>$44 per pack</p>
                   </div>
 
                   <div>
@@ -64,7 +64,7 @@ const CardsSection = () => {
                 <div className={`${styles.card} ${styles.card2}`}>
                   <div>
                     <h2>TRY OUR WATERMELON BUNDLE</h2>
-                    {/* <p>$44 per pack</p> */}
+                    <p>$44 per pack</p>
                   </div>
 
                   <div>

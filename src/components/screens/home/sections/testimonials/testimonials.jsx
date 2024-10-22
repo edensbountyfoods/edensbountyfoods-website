@@ -62,16 +62,16 @@ const TestimonialsSection = () => {
             <br />
             EXPERIENCES
           </h1>
-          {/* <p>
+          <p>
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorum
             porro perspiciatis maiores quasi reprehenderit architecto
             consectetur corporis ratione voluptatem dignissimos.
-          </p> */}
+          </p>
         </div>
       </CustomContainer>
       <br />
       <br />
-      {/* <>
+      <>
         <Swiper
           centeredSlides={true}
           spaceBetween={20}
@@ -112,7 +112,7 @@ const TestimonialsSection = () => {
                   }}
                 >
                   <div className={styles.bg}>
-                    <Image src="/assets/zebra_bg.jpg" alt="bg" fluid/>
+                    <Image src="/assets/zebra_bg.jpg" alt="bg" fluid />
                   </div>
                   <div className={styles.img}>
                     <Image src={i.img} height={110} width={110} alt="user" />
@@ -128,7 +128,7 @@ const TestimonialsSection = () => {
             );
           })}
         </Swiper>
-      </> */}
+      </>
     </section>
   );
 };

@@ -15,7 +15,7 @@ const Blob = ({ blob }) => {
           width={180}
           height={180}
         />
-        <p>{blob.text}</p>
+        <h2>{blob.text.toUpperCase()}</h2>
       </div>
     </div>
   );
@@ -25,11 +25,11 @@ export const SpecsBottle = () => {
   const blobs = [
     {
       id: "1",
-      text: "4G ENERGY",
+      text: "no artificial flavor",
     },
     {
       id: "2",
-      text: "ZERO SUGAR",
+      text: "ZERO GMO'S",
     },
     {
       id: "3",
@@ -37,7 +37,7 @@ export const SpecsBottle = () => {
     },
     {
       id: "4",
-      text: "ZERO GMO'S",
+      text: "No artificial colour",
     },
   ];
 
@@ -59,35 +59,33 @@ export const SpecsBottle = () => {
   );
 };
 
-
-
 const SpecsSection = () => {
   const specs1 = [
     {
       id: "1sc",
-      text: "3-5 hours of energy",
+      text: "Nata de coco",
       icon: "energy.avif",
       color: "greenYellow",
     },
     {
       id: "dzvsd",
-      text: "No jitters ",
+      text: "Drinkable snack",
       icon: "heart.avif",
       color: "red",
     },
   ];
   const specs2 = [
     {
+      id: "srgrt",
+      text: "Kids friendly",
+      icon: "sugar.avif",
+      color: "violet",
+    },
+    {
       id: "dgbdgb",
       text: "Nutrient rich",
       icon: "nutrient.avif",
       color: "skyblue",
-    },
-    {
-      id: "srgrt",
-      text: "Zero Sugar",
-      icon: "sugar.avif",
-      color: "violet",
     },
   ];
 
@@ -101,12 +99,12 @@ const SpecsSection = () => {
             </Col>
             <Col xs={12} lg={6}>
               <div className={styles.right}>
-                <h1>A BOOST OF HIGH QUALITY ENERGY</h1>
-                {/* <p>
+                <h1>AN INDIAN DRINK SENSATION</h1>
+                <p>
                   Lorem ipsum dolor sit amet consectetur adipisicing elit.
                   Ipsum, quisquam voluptatem nihil non a eligendi dolore
                   deleniti recusandae error. Hic.
-                </p> */}
+                </p>
                 <div className={styles.specs}>
                   <div>
                     {specs1.map((spec) => {

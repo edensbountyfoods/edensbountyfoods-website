@@ -11,15 +11,15 @@ const BannerSection = () => {
       <div>
         <CustomContainer>
           <div className={styles.cont}>
-            <h1 className={`${fonts.font1} ${styles.h1}`}>Boundless Energy,</h1>
+            <h1 className={`${fonts.font1} ${styles.h1}`}>BEVERAGES WITH A</h1>
 
             <div className={styles.l2}>
               <div className={styles.btn1}>
-                <CustomButton href='/shop'>SHOP</CustomButton>
+                <CustomButton href="/shop">SHOP</CustomButton>
               </div>
-              <h1 className={`${fonts.font1} ${styles.h2}`}>Limitless You.</h1>
+              <h1 className={`${fonts.font1} ${styles.h2}`}>TWIST OF FUN</h1>
               <div className={styles.btn2}>
-                <CustomButton href='/shop'>SHOP</CustomButton>
+                <CustomButton href="/shop">SHOP</CustomButton>
               </div>
             </div>
           </div>

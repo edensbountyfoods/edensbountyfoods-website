@@ -81,16 +81,16 @@
   > div {
     position: relative;
 
-    p {
+    h2 {
       position: absolute;
       color: $color_p3;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%) rotate(-10deg);
-      font-size: 28px;
-      font-weight: 600;
+      font-size: 23px !important;
+      // font-weight: bold;
       text-align: center;
-      line-height: 28px;
+      // line-height: 28px;
     }
   }
 

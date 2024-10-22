@@ -5,24 +5,10 @@ import styles from "./flavours.module.scss";
 import Image from "next/image";
 import Link from "next/link";
 
-const FlavoursSection = () => {
+const FlavoursSection = ({ products }) => {
   const flavours = [
-    {
-      id: "1",
-      name: "Watermelon",
-      img: "water-lemon.png",
-    },
-    {
-      id: "2",
-      name: "Raspberry",
-      img: "berry.png",
-    },
-    {
-      id: "4",
-      name: "Blueberry",
-      img: "blueberry.png",
-    },
-  
+    ...products,
+
     {
       id: "5",
       name: "Coming Soon..!",
@@ -57,11 +43,7 @@ const FlavoursSection = () => {
                 return (
                   <div key={flavour.id} className={styles.flavour}>
                     <Image
-                      src={
-                        flavour?.isGift
-                          ? `/assets/svg/gift${(idx % 2) + 1}.svg`
-                          : `/images/flavours/${flavour.img}`
-                      }
+                      src={`/assets/svg/gift${(idx % 2) + 1}.svg`}
                       alt={flavour.name}
                       height={120}
                       width={120}
@@ -76,7 +58,7 @@ const FlavoursSection = () => {
                     src={
                       flavour?.isGift
                         ? `/assets/svg/gift${(idx % 2) + 1}.svg`
-                        : `/images/flavours/${flavour.img}`
+                        : `/images/flavours/${flavour.id}.png`
                     }
                     alt={flavour.name}
                     height={120}

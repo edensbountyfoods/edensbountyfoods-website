@@ -42,11 +42,11 @@ const LocationsSection = () => {
             />
             <h1>YAJA LOCATIONS</h1>
 
-            {/* <p>
+            <p>
               Lorem ipsum, dolor sit amet consectetur adipisicing elit.
               Laudantium expedita beatae ad doloribus, cum distinctio ex
               delectus deleniti perspiciatis excepturi maxime exercitationem
-            </p> */}
+            </p>
           </div>
 
           <br />
