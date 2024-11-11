@@ -1,0 +1,12 @@
+.CustomInput {
+  color: black;
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+
+  &:active,
+  &:focus-visible {
+    border: 1px solid $color_p1;
+  }
+}

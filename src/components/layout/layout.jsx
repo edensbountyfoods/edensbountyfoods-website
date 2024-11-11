@@ -5,9 +5,9 @@ import Footer from "./footer/footer";
 const Layout = ({ children, cartItems, setCartItems, products }) => {
   return (
     <div>
-      <Header cartItems={cartItems} setCartItems={setCartItems} />
+      {/* <Header cartItems={cartItems} setCartItems={setCartItems} /> */}
       {children}
-      <Footer products={products} />
+      {/* <Footer products={products} /> */}
     </div>
   );
 };

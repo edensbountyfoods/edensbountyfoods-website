@@ -1,0 +1,17 @@
+.LoginScreen {
+  height: 100dvh;
+  @include flexCenter;
+  form {
+    @include flexCenter;
+    background-color: $color_p2;
+    padding: 20px;
+    flex-direction: column;
+    gap: 20px;
+
+    .btn {
+      width: 100%;
+      padding: 5px 10px;
+      background-color: $color_p1;
+    }
+  }
+}

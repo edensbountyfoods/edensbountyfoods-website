@@ -3,10 +3,13 @@ import "aos/dist/aos.css";
 import Layout from "@/components/layout/layout";
 import fonts from "@/styles/fonts/fonts";
 import styles from "../styles/Home.module.scss";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { onAuthStateChanged } from "firebase/auth";
+import { auth } from "@/libs/firebase/firebase";
 
 export default function App({ Component, pageProps }) {
   const [cartItems, setCartItems] = useState([]);
+  const [admin, setAdmin] = useState(null);
 
   const products = [
     {
@@ -46,6 +49,14 @@ export default function App({ Component, pageProps }) {
     }
   };
 
+  
+
+  useEffect(() => {
+    onAuthStateChanged(auth, (session) => {
+      setAdmin(session);
+    });
+  }, []);
+
   return (
     <>
       <main className={`${fonts.font1} ${styles.body}`}>
@@ -60,6 +71,7 @@ export default function App({ Component, pageProps }) {
             setCartItems={setCartItems}
             products={products}
             addToCart={addToCart}
+            admin={admin}
           />
         </Layout>
       </main>
