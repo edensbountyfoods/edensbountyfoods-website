@@ -34,7 +34,7 @@ const Header = ({ cartItems, setCartItems }) => {
           <div className={styles.logo}>
             <Link href="/">
               <Image
-                src="/logo/logo_main1.png"
+                src="/logo/logo_main.png"
                 alt="main_logo"
                 width={'auto'}
                 height={80}

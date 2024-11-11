@@ -12,7 +12,7 @@ const Footer = ({ products }) => {
       <CustomContainer>
         <div className={styles.top}>
           <div className={styles.left}>
-            <Image src="/logo/logo_main.png" width={100} alt="logo" />
+            <Image src="/logo/logo_main.png" width={200} alt="logo" />
             <p>Energize your life, the Tigris way</p>
             <SocialLinks />
           </div>

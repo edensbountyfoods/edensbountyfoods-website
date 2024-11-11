@@ -3,7 +3,7 @@ import styles from "./specs.module.scss";
 import CustomContainer from "@/components/ui/custom_container/custom_container";
 import CustomSection from "@/components/ui/custom_section/custom_section";
 import { Col, Row } from "react-bootstrap";
-import Image from "next/image";
+import {Image} from "react-bootstrap";
 
 const Blob = ({ blob }) => {
   return (
@@ -48,7 +48,7 @@ export const SpecsBottle = () => {
           return <Blob key={`blob_${blob.id}`} blob={blob} />;
         })}
         <Image
-          src="/assets/bottle.avif"
+          src="/assets/bottle.png"
           height={600}
           width={200}
           alt="bottle"
@@ -100,11 +100,7 @@ const SpecsSection = () => {
             <Col xs={12} lg={6}>
               <div className={styles.right}>
                 <h1>AN INDIAN DRINK SENSATION</h1>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Ipsum, quisquam voluptatem nihil non a eligendi dolore
-                  deleniti recusandae error. Hic.
-                </p>
+            
                 <div className={styles.specs}>
                   <div>
                     {specs1.map((spec) => {

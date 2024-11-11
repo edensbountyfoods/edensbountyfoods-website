@@ -18,7 +18,7 @@ const handler = async (req, res) => {
       amount: req.body.amount * 100, // Amount in paise (100 rupees)
       redirectUrl: `${clientUrl}/${merchantTransactionId}`,
       redirectMode: "REDIRECT",
-      mobileNumber: "9999999999",
+      // mobileNumber: "9999999999",
       paymentInstrument: {
         type: "PAY_PAGE",
       },

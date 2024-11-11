@@ -10,10 +10,10 @@ export default function App({ Component, pageProps }) {
 
   const products = [
     {
-      id: "mango",
-      name: "Mango",
+      id: "passion",
+      name: "Papa Passion",
       color: "#dfa909",
-      imageUrl: "/images/products/mango.png",
+      imageUrl: "/images/products/papa_passion.png",
       price: 124,
     },
     {
@@ -25,9 +25,9 @@ export default function App({ Component, pageProps }) {
     },
     {
       id: "lychee",
-      name: "Lychee",
+      name: "Lala Lychee",
       color: "#fa5e93",
-      imageUrl: "/images/products/lychee.png",
+      imageUrl: "/images/products/lala_lychee.png",
       price: 99,
     },
   ];
