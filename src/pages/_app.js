@@ -49,8 +49,6 @@ export default function App({ Component, pageProps }) {
     }
   };
 
-  
-
   useEffect(() => {
     onAuthStateChanged(auth, (session) => {
       setAdmin(session);
@@ -59,7 +57,13 @@ export default function App({ Component, pageProps }) {
 
   return (
     <>
-      <main className={`${fonts.font1} ${styles.body}`}>
+      <main
+        className={`
+      
+    fonts.font1
+      
+      ${styles.body}`}
+      >
         <Layout
           cartItems={cartItems}
           setCartItems={setCartItems}
