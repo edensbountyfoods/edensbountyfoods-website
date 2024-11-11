@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import LoginScreen from "./login/login";
 import AdminPanel from "./admin_panel/admin_panel";
 
