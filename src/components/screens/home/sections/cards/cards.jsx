@@ -29,7 +29,7 @@ const CardsSection = () => {
       <CustomContainer>
         <CustomSection>
           <div className={styles.head}>
-            <h1>{"Elevate you snack with YAJA's Creations".toUpperCase()}</h1>
+            <h1>{"Elevate your snack with YAJA's Creations".toUpperCase()}</h1>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse
               molestias et voluptatibus perferendis impedit minus. Ipsa, dolor?
@@ -43,15 +43,31 @@ const CardsSection = () => {
               <Col xs={12} md={6}>
                 <div className={`${styles.card} ${styles.card1}`}>
                   <div>
-                    <h2>TRY OUR WATERMELON BUNDLE</h2>
-                    <p>$44 per pack</p>
+                    <h2>TRY OUR PASSIONS BUNDLE</h2>
+                    <p>
+                      ₹150 per pack <small>(Pack of 6)</small>
+                    </p>
                   </div>
 
-                  <div>
+                  {/* <Image src="/images/bottles.avif" fluid alt="bottles.avif" /> */}
+                  <div className={styles.img_wrap}>
                     <Image
-                      src="/images/bottles.avif"
-                      fluid
+                      src="/images/products/papa_passion.png"
+                      // fluid
                       alt="bottles.avif"
+                      height={300}
+                    />
+                    <Image
+                      src="/images/products/papa_passion.png"
+                      // fluid
+                      alt="bottles.avif"
+                      height={350}
+                    />
+                    <Image
+                      src="/images/products/papa_passion.png"
+                      // fluid
+                      alt="bottles.avif"
+                      height={300}
                     />
                   </div>
                   <br />
@@ -63,12 +79,34 @@ const CardsSection = () => {
               <Col xs={12} md={6}>
                 <div className={`${styles.card} ${styles.card2}`}>
                   <div>
-                    <h2>TRY OUR WATERMELON BUNDLE</h2>
-                    <p>$44 per pack</p>
+                    <h2>
+                      TRY OUR LYCHEE
+                      <br /> BUNDLE
+                    </h2>
+                    <p>
+                      ₹150 per pack <small>(Pack of 6)</small>
+                    </p>
                   </div>
 
-                  <div>
-                    <Image src="/images/box.avif" fluid alt="box" />
+                  <div className={styles.img_wrap}>
+                    <Image
+                      src="/images/products/lala_lychee.png"
+                      // fluid
+                      alt="bottles.avif"
+                      height={300}
+                    />
+                    <Image
+                      src="/images/products/lala_lychee.png"
+                      // fluid
+                      alt="bottles.avif"
+                      height={350}
+                    />
+                    <Image
+                      src="/images/products/lala_lychee.png"
+                      // fluid
+                      alt="bottles.avif"
+                      height={300}
+                    />
                   </div>
                   <br />
                   <div>
@@ -76,7 +114,7 @@ const CardsSection = () => {
                   </div>
                 </div>
               </Col>
-              <Col xs={12}>
+              {/* <Col xs={12}>
                 <div className={`${styles.card} ${styles.card3}`}>
                   <Row>
                     <Col xs={12} md={6}>
@@ -111,7 +149,7 @@ const CardsSection = () => {
                     </Col>
                   </Row>
                 </div>
-              </Col>
+              </Col> */}
             </Row>
           </div>
         </CustomSection>

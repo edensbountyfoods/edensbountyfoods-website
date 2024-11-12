@@ -47,7 +47,7 @@ const IngredientsSection = () => {
     {
       id: "sdvpsd",
       name: "NO ARTIFICIAL COLORS OR FLAVOURS",
-      img: "no-artificial-flavors.webp",
+      img: "no-artificial-flavors.png",
       text: "Our products contain no artificial colors or flavors, ensuring a natural taste and appearance, promoting health and wellness while prioritizing high-quality, wholesome ingredients.",
     },
   ];

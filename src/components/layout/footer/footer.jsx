@@ -13,7 +13,7 @@ const Footer = ({ products }) => {
         <div className={styles.top}>
           <div className={styles.left}>
             <Image src="/logo/logo_main.png" width={200} alt="logo" />
-            <p>Energize your life, the Tigris way</p>
+            <p>Elevate Your Snacking, The YAJA Way.</p>
             <SocialLinks />
           </div>
 

@@ -45,7 +45,9 @@ const CheckoutScreen = ({ cartItems, setCartItems }) => {
     });
   }
 
-  const placeOrder = async () => {
+  const placeOrder = async (e) => {
+    e.preventDefault();
+
     setIsLoading(true);
 
     try {
@@ -96,7 +98,7 @@ const CheckoutScreen = ({ cartItems, setCartItems }) => {
       <hr />
       <CustomContainer>
         <div className={styles.formContainer}>
-          <form>
+          <form onSubmit={placeOrder}>
             <Row>
               <Col xs={12} md={7}>
                 <div className={styles.left}>
@@ -229,7 +231,6 @@ const CheckoutScreen = ({ cartItems, setCartItems }) => {
                   <CustomButton
                     btnType="submit"
                     disabled={totalPrice < 1 || isLoading}
-                    clickHandler={placeOrder}
                   >
                     {isLoading ? "Please Wait..." : "Place Order"}
                   </CustomButton>
@@ -237,14 +238,6 @@ const CheckoutScreen = ({ cartItems, setCartItems }) => {
               </Col>
             </Row>
           </form>
-
-          <CustomButton
-                    btnType="submit"
-                    // disabled={totalPrice < 1 || isLoading}
-                    clickHandler={placeOrder}
-                  >
-                    {isLoading ? "Please Wait..." : "Place Order"}
-                  </CustomButton>
         </div>
       </CustomContainer>
     </div>

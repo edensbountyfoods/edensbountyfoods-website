@@ -3,7 +3,7 @@ import styles from "./specs.module.scss";
 import CustomContainer from "@/components/ui/custom_container/custom_container";
 import CustomSection from "@/components/ui/custom_section/custom_section";
 import { Col, Row } from "react-bootstrap";
-import {Image} from "react-bootstrap";
+import { Image } from "react-bootstrap";
 
 const Blob = ({ blob }) => {
   return (
@@ -29,11 +29,11 @@ export const SpecsBottle = () => {
     },
     {
       id: "2",
-      text: "ZERO GMO'S",
+      text: "RO Water",
     },
     {
       id: "3",
-      text: "4G BCAA'S",
+      text: "Hygienically packed",
     },
     {
       id: "4",
@@ -100,7 +100,14 @@ const SpecsSection = () => {
             <Col xs={12} lg={6}>
               <div className={styles.right}>
                 <h1>AN INDIAN DRINK SENSATION</h1>
-            
+                <p>
+                  Yaja - India’s Unique Natural Beverage Brand: Discover Yaja,
+                  an innovative drink crafted with natural ingredients like
+                  basil seeds, fruit pulp, and fermented coconut jelly. Our
+                  refreshing beverages are nutrient-rich, and free from
+                  artificial colors and flavors, catering to all age groups.
+                  Make Yaja your new favorite.
+                </p>
                 <div className={styles.specs}>
                   <div>
                     {specs1.map((spec) => {

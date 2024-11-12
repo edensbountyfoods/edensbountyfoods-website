@@ -4,6 +4,7 @@ import Layout from "@/components/layout/layout";
 import fonts from "@/styles/fonts/fonts";
 import styles from "../styles/Home.module.scss";
 import { useState } from "react";
+import Head from "next/head";
 
 export default function App({ Component, pageProps }) {
   const [cartItems, setCartItems] = useState([]);
@@ -14,21 +15,21 @@ export default function App({ Component, pageProps }) {
       name: "Papa Passion",
       color: "#dfa909",
       imageUrl: "/images/products/papa_passion.png",
-      price: 124,
+      price: 25,
     },
     {
       id: "strawberry",
       name: "Strawberry",
       color: "#e8110b",
       imageUrl: "/images/products/strawberry.png",
-      price: 110,
+      price: 25,
     },
     {
       id: "lychee",
       name: "Lala Lychee",
       color: "#fa5e93",
       imageUrl: "/images/products/lala_lychee.png",
-      price: 99,
+      price: 25,
     },
   ];
 
@@ -48,6 +49,9 @@ export default function App({ Component, pageProps }) {
 
   return (
     <>
+    <Head>
+      <title>Yaja</title>
+    </Head>
       <main className={`${fonts.font1} ${styles.body}`}>
         <Layout
           cartItems={cartItems}

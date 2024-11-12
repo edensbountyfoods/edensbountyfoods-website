@@ -1,8 +1,9 @@
 .OurFlavours {
   //   height: 160dvh;
-  background-image: url('/assets/blue-bg.jpg');
+  background-image: url('/assets/prod_bg.jpg');
   background-size: cover;
-  background-position: bottom;
+  // background-position: 0 80px;
+  background-position: center;
 
   .head {
     h1 {
@@ -19,7 +20,7 @@
 
     h4 {
       font-size: 70px;
-      margin: 20px 0;
+      // margin: 20px 0;
     }
 
     img {

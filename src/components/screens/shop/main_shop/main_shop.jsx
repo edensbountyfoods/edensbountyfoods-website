@@ -25,7 +25,14 @@ const Product = ({ product, addToCart }) => {
           >
             {product.name}
           </h2>
-          <p>Rs.{product.price}</p>
+
+          <p>
+            <span>Rs.30</span>
+          </p>
+          <p>
+            Rs.
+            {product.price}
+          </p>
           <Image src={product.imageUrl} fluid alt={product.name} />
         </Link>
         <div

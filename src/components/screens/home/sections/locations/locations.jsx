@@ -4,6 +4,7 @@ import React from "react";
 import { Col, Image, Row } from "react-bootstrap";
 import styles from "./locations.module.scss";
 import CustomButton from "@/components/ui/custom_button/custom_button";
+import { GeoAlt, GeoAltFill } from "react-bootstrap-icons";
 
 const LocationsSection = () => {
   const locations = [
@@ -11,21 +12,25 @@ const LocationsSection = () => {
       id: "sfnvs",
       logo: "dalware_logo.svg",
       color: "#c4ffcc",
+      locName: "Chennai",
     },
     {
       id: "aelmglae",
       logo: "dalware_logo.svg",
       color: "#c4ffcc",
+      locName: "Kanyakuamri",
     },
     {
       id: "ergslmsef",
       logo: "dalware_logo.svg",
       color: "#c4ffcc",
+      locName: "Nagarkovil",
     },
     {
       id: "aeofoaeo",
       logo: "dalware_logo.svg",
       color: "#c4ffcc",
+      locName: "Kanchipuram",
     },
   ];
 
@@ -62,11 +67,14 @@ const LocationsSection = () => {
                       }}
                       className={styles.loc}
                     >
-                      <Image
+                      <GeoAltFill />
+                      <h4>{loc.locName}</h4>
+
+                      {/* <Image
                         src={`/images/${loc.logo}`}
                         alt="logo"
                         width={110}
-                      />
+                      /> */}
                     </div>
                   </Col>
                 );

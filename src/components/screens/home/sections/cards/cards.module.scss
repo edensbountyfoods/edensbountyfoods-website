@@ -27,8 +27,17 @@
         opacity: 0.7;
       }
 
+      .img_wrap {
+        display: flex;
+        // justify-content: space-around;
+        max-width: 500px;
+        margin: auto;
+        gap: 20px;
+      }
+
       &.card1 {
-        background-color: #f42e3d;
+        // background-color: #f42e3d;
+        background-color: #3f3f3f;
         text-align: center;
 
         p {
@@ -37,7 +46,7 @@
         }
       }
       &.card2 {
-        background-color: #3f3f3f;
+        background-color: #ec2f55;
         text-align: center;
 
         p {

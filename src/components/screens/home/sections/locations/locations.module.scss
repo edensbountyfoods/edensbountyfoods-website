@@ -20,6 +20,19 @@
       margin: 12px 0;
       border-radius: 10px;
       @include flexCenter;
+      gap: 4px;
+      * {
+        color: black;
+      }
+      svg {
+        font-size: 20px;
+        margin-bottom: 4px;
+      }
+
+      h4{
+        letter-spacing: 1px;
+        font-size: 28px;
+      }
     }
   }
 
