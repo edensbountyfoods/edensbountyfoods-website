@@ -16,6 +16,7 @@ export default function App({ Component, pageProps }) {
       color: "#dfa909",
       imageUrl: "/images/products/papa_passion.png",
       price: 25,
+      isDrink: true,
     },
     {
       id: "strawberry",
@@ -23,12 +24,29 @@ export default function App({ Component, pageProps }) {
       color: "#e8110b",
       imageUrl: "/images/products/strawberry.png",
       price: 25,
+      isDrink: true,
     },
     {
       id: "lychee",
       name: "Lala Lychee",
       color: "#fa5e93",
       imageUrl: "/images/products/lala_lychee.png",
+      price: 25,
+      isDrink: true,
+    },
+    {
+      id: "tapioca_chips",
+      name: "Keralthu Kappa(Tapioca) Chips",
+      color: "#fa5e93",
+      imageUrl: "/images/products/nendharam_chips.png",
+
+      price: 25,
+    },
+    {
+      id: "nendharam_chips",
+      name: "Nagarkoivil Nendharam Chips",
+      color: "#fa5e93",
+      imageUrl: "/images/products/nendharam_chips.png",
       price: 25,
     },
   ];
@@ -49,9 +67,9 @@ export default function App({ Component, pageProps }) {
 
   return (
     <>
-    <Head>
-      <title>Yaja</title>
-    </Head>
+      <Head>
+        <title>Yaja</title>
+      </Head>
       <main className={`${fonts.font1} ${styles.body}`}>
         <Layout
           cartItems={cartItems}

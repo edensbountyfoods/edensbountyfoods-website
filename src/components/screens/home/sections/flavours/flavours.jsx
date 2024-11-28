@@ -1,9 +1,10 @@
 import CustomContainer from "@/components/ui/custom_container/custom_container";
 import CustomSection from "@/components/ui/custom_section/custom_section";
-import React from "react";
+import React, { useRef } from "react";
 import styles from "./flavours.module.scss";
 import Image from "next/image";
 import Link from "next/link";
+import { useInView, motion } from "framer-motion";
 
 const FlavoursSection = ({ products }) => {
   const flavours = [
@@ -23,13 +24,23 @@ const FlavoursSection = ({ products }) => {
     },
   ];
 
+  const snacks = [
+    
+  ]
+
+  const ref = useRef();
+
+  const isInView = useInView(ref, {
+    margin: "-150px",
+  });
+
   return (
     <section className={styles.FlavoursSection}>
       <CustomContainer>
         <CustomSection>
           <div className={styles.top}>
             <div>
-              <h1 className={styles.head}>FLAVOURS</h1>
+              <h1 className={styles.head}>PRODUCTS</h1>
               <span className={styles.span}> AMAZING</span>
             </div>
           </div>
@@ -37,11 +48,22 @@ const FlavoursSection = ({ products }) => {
           <br />
           <br />
 
-          <div className={styles.wrap}>
+          <div className={styles.wrap} ref={ref}>
             {flavours.map((flavour, idx) => {
               if (flavour.isGift) {
                 return (
-                  <div key={flavour.id} className={styles.flavour}>
+                  <motion.div
+                    key={flavour.id}
+                    className={styles.flavour}
+                    initial={{
+                      scale: 0,
+                    }}
+                    animate={isInView ? { scale: 1 } : { scale: 0 }}
+                    transition={{
+                      duration: 0.3,
+                      delay: idx / 10,
+                    }}
+                  >
                     <Image
                       src={`/assets/svg/gift${(idx % 2) + 1}.svg`}
                       alt={flavour.name}
@@ -49,23 +71,37 @@ const FlavoursSection = ({ products }) => {
                       width={120}
                     />
                     <p>{flavour.name}</p>
-                  </div>
+                  </motion.div>
                 );
               }
               return (
-                <Link href="/" key={flavour.id} className={styles.flavour}>
-                  <Image
-                    src={
-                      flavour?.isGift
-                        ? `/assets/svg/gift${(idx % 2) + 1}.svg`
-                        : `/images/flavours/${flavour.id}.png`
-                    }
-                    alt={flavour.name}
-                    height={120}
-                    width={120}
-                  />
-                  <p>{flavour.name}</p>
-                </Link>
+                <motion.div
+                  key={flavour.id}
+                  className={styles.flavour}
+                  initial={{
+                    scale: 0,
+                  }}
+                  animate={isInView ? { scale: 1 } : { scale: 0 }}
+                  transition={{
+                    duration: 0.3,
+                    delay: idx / 10,
+                  }}
+                >
+                  <Link href="/">
+                    <Image
+                      src={
+                        flavour?.isGift
+                          ? `/assets/svg/gift${(idx % 2) + 1}.svg`
+                          : `/images/flavours/${flavour.id}.png`
+                      }
+                      alt={flavour.name}
+                      height={120}
+                      width={120}
+                      // height='auto'
+                    />
+                    <p>{flavour.name}</p>
+                  </Link>
+                </motion.div>
               );
             })}
           </div>

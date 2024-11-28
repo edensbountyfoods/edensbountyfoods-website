@@ -8,16 +8,17 @@ import fonts from "@/styles/fonts/fonts";
 const BannerSection = () => {
   return (
     <section className={styles.BannerSection}>
+      <div className={styles.bgOverlay}></div>
       <div>
         <CustomContainer>
           <div className={styles.cont}>
-            <h1 className={`${fonts.font1} ${styles.h1}`}>BEVERAGES WITH A</h1>
+            <h1 className={`${fonts.font1} ${styles.h1}`}>WELCOME TO THE</h1>
 
             <div className={styles.l2}>
               <div className={styles.btn1}>
                 <CustomButton href="/shop">SHOP</CustomButton>
               </div>
-              <h1 className={`${fonts.font1} ${styles.h2}`}>TWIST OF FUN</h1>
+              <h1 className={`${fonts.font1} ${styles.h2}`}>UNIVERSE OF YAJA</h1>
               <div className={styles.btn2}>
                 <CustomButton href="/shop">SHOP</CustomButton>
               </div>

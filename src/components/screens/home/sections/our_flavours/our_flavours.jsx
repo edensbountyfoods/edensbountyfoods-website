@@ -53,22 +53,26 @@ const OurFlavours = ({ products }) => {
               }
             >
               {products.map((f) => {
-                return (
-                  <Carousel.Item key={f.id}>
-                    <div className={styles.Product}>
-                      <h4
-                        style={{
-                          // color: f.color,
-                        }}
-                      >
-                        {f.name}
-                      </h4>
-                      <Link href={`/shop/${f.id}`}>
-                        <Image src={f.imageUrl} alt="bottle" />
-                      </Link>
-                    </div>
-                  </Carousel.Item>
-                );
+                if (f.isDrink) {
+                  return (
+                    <Carousel.Item key={f.id}>
+                      <div className={styles.Product}>
+                        <h4
+                          style={
+                            {
+                              // color: f.color,
+                            }
+                          }
+                        >
+                          {f.name}
+                        </h4>
+                        <Link href={`/shop/${f.id}`}>
+                          <Image src={f.imageUrl} alt="bottle" />
+                        </Link>
+                      </div>
+                    </Carousel.Item>
+                  );
+                }
               })}
             </Carousel>
           </div>

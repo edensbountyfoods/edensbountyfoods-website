@@ -26,7 +26,7 @@ const Footer = ({ products }) => {
               <Link href="/contact">Contact</Link>
             </div>
             <div className={styles.box}>
-              <h1>Flavours</h1>
+              <h1>Products</h1>
               {products.map((product) => {
                 return (
                   <Link key={product.id} href={`/shop/${product.id}`}>

@@ -48,9 +48,10 @@ const LocationsSection = () => {
             <h1>YAJA LOCATIONS</h1>
 
             <p>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-              Laudantium expedita beatae ad doloribus, cum distinctio ex
-              delectus deleniti perspiciatis excepturi maxime exercitationem
+              As we grow, we aim to reach every part of India and beyond,
+              ensuring that everyone can experience Yaja’s unique blend of
+              taste, health, and sustainability. Join us on our journey as we
+              bring nature’s best to your doorstep!
             </p>
           </div>
 

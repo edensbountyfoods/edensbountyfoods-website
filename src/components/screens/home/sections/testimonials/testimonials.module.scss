@@ -41,6 +41,14 @@
     border-radius: 50%;
     overflow: hidden;
     border: 2px solid white;
+    width: 100px;
+    height: 100px;
+
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+
+    // padding-top: 10px;
   }
 
   .text {

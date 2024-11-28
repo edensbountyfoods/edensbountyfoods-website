@@ -18,38 +18,39 @@ const TestimonialsSection = () => {
   const testimonials = [
     {
       id: "advsd",
-      img: "/assets/user.avif",
-
-      text: " Lorem ipsum dolor sit amet consectetur adipisicing elit.Corporis, accusamus! ",
-      name: "Andrew Power",
+      img: "/assets/user_male.png",
+      text: "Yaja's drinks are a game-changer! The flavor combinations are so refreshing, and I love the basil seeds. It's like drinking something fun and healthy at the same time.",
+      name: "Rahul T",
     },
     {
       id: "padspsd",
-      img: "/assets/user.avif",
+      img: "/assets/user_female.png",
       color: "#ff3b47",
-      text: " Lorem ipsum dolor sit amet consectetur adipisicing elit.Corporis, accusamus!",
-      name: "Andrew Power",
+      text: "I’ve tried a lot of drinks, but nothing like Yaja. The coconut jelly adds such a unique texture, and it’s so satisfying. I feel good about what I’m drinking!",
+      name: "Neha P",
     },
     {
       id: "jdvnsd",
-      img: "/assets/user.avif",
+      img: "/assets/user_male.png",
+
       color: "#ff3b47",
-      text: " Lorem ipsum dolor sit amet consectetur adipisicing elit.Corporis, accusamus!",
-      name: "Andrew Power",
+      text: "The best part about Yaja’s beverages is knowing they’re all-natural. I can enjoy them guilt-free, and the taste is just so refreshing. Definitely my go-to drink now.",
+      name: "Suman D",
     },
     {
       id: "davkosdo",
-      img: "/assets/user.avif",
+      img: "/assets/user_female.png",
       color: "#ff3b47",
-      text: " Lorem ipsum dolor sit amet consectetur adipisicing elit.Corporis, accusamus!",
-      name: "Andrew Power",
+      text: "I’m always looking for healthier drink options, and Yaja has hit the mark! It’s light, flavorful, and packed with nutrients. My kids love it too!",
+      name: "Priya L",
     },
     {
       id: "sdlvlsdmv",
-      img: "/assets/user.avif",
+      img: "/assets/user_female.png",
+
       color: "#ff3b47",
-      text: " Lorem ipsum dolor sit amet consectetur adipisicing elit.Corporis, accusamus!",
-      name: "Andrew Power",
+      text: "I love the texture of the fermented coconut jelly in Yaja’s drinks! It’s something different from anything I’ve had before, and the flavors are so fresh. Highly recommend!",
+      name: "Arjun S",
     },
   ];
 
@@ -63,9 +64,8 @@ const TestimonialsSection = () => {
             EXPERIENCES
           </h1>
           <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorum
-            porro perspiciatis maiores quasi reprehenderit architecto
-            consectetur corporis ratione voluptatem dignissimos.
+            At Yaja, everything we create is inspired by real stories and real
+            people
           </p>
         </div>
       </CustomContainer>
@@ -115,7 +115,7 @@ const TestimonialsSection = () => {
                     <Image src="/assets/zebra_bg.jpg" alt="bg" fluid />
                   </div>
                   <div className={styles.img}>
-                    <Image src={i.img} height={110} width={110} alt="user" />
+                    <Image src={i.img} height={85} width={85} alt="user" />
                   </div>
                   <div className={styles.text}>
                     <p>&quot;</p>

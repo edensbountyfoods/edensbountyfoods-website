@@ -31,9 +31,11 @@ const CardsSection = () => {
           <div className={styles.head}>
             <h1>{"Elevate your snack with YAJA's Creations".toUpperCase()}</h1>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse
-              molestias et voluptatibus perferendis impedit minus. Ipsa, dolor?
-              Dolores, ex nam.
+              Yaja brings you a unique blend of healthy, flavorful beverages and
+              authentic snacks. From refreshing drinks crafted with real fruit
+              pulp and basil seeds and soon-to-be-launched delicious tapioca
+              chips, banana chips and theater-style popcorn, Yaja offers the
+              perfect balance of taste and nutrition
             </p>
           </div>
 
@@ -114,7 +116,7 @@ const CardsSection = () => {
                   </div>
                 </div>
               </Col>
-              {/* <Col xs={12}>
+              <Col xs={12}>
                 <div className={`${styles.card} ${styles.card3}`}>
                   <Row>
                     <Col xs={12} md={6}>
@@ -149,7 +151,7 @@ const CardsSection = () => {
                     </Col>
                   </Row>
                 </div>
-              </Col> */}
+              </Col>
             </Row>
           </div>
         </CustomSection>

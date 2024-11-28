@@ -16,7 +16,7 @@ const Layout = ({ children, cartItems, setCartItems, products }) => {
       >
         <FloatingWhatsApp
           phoneNumber="+919952988610"
-          accountName="Yaja Food Products"
+          accountName="Yajamigo"
           avatar="/logo/logo_main.png"
         />
       </div>

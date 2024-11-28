@@ -1,13 +1,23 @@
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 import styles from "./specs.module.scss";
 import CustomContainer from "@/components/ui/custom_container/custom_container";
 import CustomSection from "@/components/ui/custom_section/custom_section";
 import { Col, Row } from "react-bootstrap";
 import { Image } from "react-bootstrap";
+import { useScroll, motion, useTransform, useInView } from "framer-motion";
 
-const Blob = ({ blob }) => {
+const Blob = ({ blob, isInView, index }) => {
+  // console.log();
+
   return (
-    <div className={`${styles.blob} ${styles[`blob_${blob.id}`]}`}>
+    <motion.div
+      className={`${styles.blob} ${styles[`blob_${blob.id}`]}`}
+      initial={{
+        scale: 0,
+      }}
+      animate={isInView ? { scale: 1 } : {}}
+      transition={{ duration: 0.2, delay: index / 10 + 0.2 }}
+    >
       <div>
         <Image
           src={`/assets/blobs/blob${blob.id}.png`}
@@ -17,7 +27,7 @@ const Blob = ({ blob }) => {
         />
         <h2>{blob.text.toUpperCase()}</h2>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
@@ -41,19 +51,40 @@ export const SpecsBottle = () => {
     },
   ];
 
+  const ref = useRef(null);
+  const isInView = useInView(ref, {
+    // once: true,
+  });
+
   return (
     <div className={styles.left}>
       <div className={styles.img}>
-        {blobs.map((blob) => {
-          return <Blob key={`blob_${blob.id}`} blob={blob} />;
+        {blobs.map((blob, index) => {
+          return (
+            <Blob
+              key={`blob_${blob.id}`}
+              blob={blob}
+              isInView={isInView}
+              index={index}
+            />
+          );
         })}
-        <Image
-          src="/assets/bottle.png"
-          height={600}
-          width={200}
-          alt="bottle"
-          className={styles.btl}
-        />
+        <motion.div
+          initial={{ rotate: -50, scale: 0 }}
+          animate={
+            isInView ? { rotate: 0, scale: 1 } : { rotate: -50, scale: 0 }
+          }
+          transition={{ duration: 0.2 }}
+          ref={ref}
+        >
+          <Image
+            src="/assets/bottle.png"
+            height={600}
+            width={200}
+            alt="bottle"
+            className={styles.btl}
+          />
+        </motion.div>
       </div>
     </div>
   );
@@ -89,6 +120,15 @@ const SpecsSection = () => {
     },
   ];
 
+  const ref = useRef(null);
+
+  const isInView = useInView(ref);
+
+  const specsRef = useRef(null);
+  const specsIsInView = useInView(specsRef, {
+    margin: '-200px',
+  });
+
   return (
     <section className={styles.SpecsSection}>
       <CustomContainer>
@@ -98,25 +138,66 @@ const SpecsSection = () => {
               <SpecsBottle />
             </Col>
             <Col xs={12} lg={6}>
-              <div className={styles.right}>
-                <h1>AN INDIAN DRINK SENSATION</h1>
-                <p>
-                  Yaja - India’s Unique Natural Beverage Brand: Discover Yaja,
-                  an innovative drink crafted with natural ingredients like
-                  basil seeds, fruit pulp, and fermented coconut jelly. Our
-                  refreshing beverages are nutrient-rich, and free from
-                  artificial colors and flavors, catering to all age groups.
-                  Make Yaja your new favorite.
-                </p>
-                <div className={styles.specs}>
+              <motion.div className={styles.right}>
+                <motion.div
+                  ref={ref}
+                  initial={{
+                    rotateY: 90,
+                    scaleX: 0,
+                  }}
+                  animate={
+                    isInView
+                      ? {
+                          rotateY: 0,
+                          rotateZ: 0,
+                          opacity: 1,
+                          scaleX: 1,
+                        }
+                      : {
+                          rotateY: 90,
+                          rotateZ: 10,
+                          scaleX: 0,
+                        }
+                  }
+                  transition={{
+                    duration: 0.5,
+                  }}
+                >
+                  <motion.h1>AN INDIAN DRINK SENSATION</motion.h1>
+                  <p>
+                    Yaja - India’s Unique Natural Beverage Brand: Discover Yaja,
+                    an innovative drink crafted with natural ingredients like
+                    basil seeds, fruit pulp, and fermented coconut jelly. Our
+                    refreshing beverages are nutrient-rich, and free from
+                    artificial colors and flavors, catering to all age groups.
+                    Make Yaja your new favorite.
+                  </p>
+                </motion.div>
+                <div className={styles.specs} ref={specsRef}>
                   <div>
                     {specs1.map((spec) => {
                       return (
-                        <div
+                        <motion.div
                           className={styles.spec}
                           key={spec.id}
                           style={{
                             borderColor: spec.color,
+                          }}
+                          initial={{
+                            rotateY: 90,
+                          }}
+                          animate={
+                            specsIsInView
+                              ? {
+                                  rotateY: 0,
+                                }
+                              : {
+                                  rotateY: 90,
+                                }
+                          }
+                          transition={{
+                            duration: 0.3,
+                            delay: 0.1,
                           }}
                         >
                           <Image
@@ -126,7 +207,7 @@ const SpecsSection = () => {
                             height={30}
                           />
                           <p>{spec.text}</p>
-                        </div>
+                        </motion.div>
                       );
                     })}
                   </div>
@@ -135,11 +216,27 @@ const SpecsSection = () => {
                   <div>
                     {specs2.map((spec) => {
                       return (
-                        <div
+                        <motion.div
                           className={styles.spec}
                           key={spec.id}
                           style={{
                             borderColor: spec.color,
+                          }}
+                          initial={{
+                            rotateY: 90,
+                          }}
+                          animate={
+                            specsIsInView
+                              ? {
+                                  rotateY: 0,
+                                }
+                              : {
+                                  rotateY: 90,
+                                }
+                          }
+                          transition={{
+                            duration: 0.3,
+                            delay: 0.3,
                           }}
                         >
                           <Image
@@ -149,12 +246,12 @@ const SpecsSection = () => {
                             height={30}
                           />
                           <p>{spec.text}</p>
-                        </div>
+                        </motion.div>
                       );
                     })}
                   </div>
                 </div>
-              </div>
+              </motion.div>
             </Col>
           </Row>
         </CustomSection>

@@ -2,11 +2,22 @@
   height: 120dvh;
   z-index: 6;
   background-image: linear-gradient(#00000075, #0000 11%),
-    url("/images/hero.jpg");
+    url("/images/hero.webp");
   // background-position: 0 0, 50% 65%;
   background-position: top;
   background-repeat: repeat, no-repeat;
   background-size: auto, cover;
+  position: relative;
+
+  .bgOverlay {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
 
   .cont {
     // text-align: center;
