@@ -61,11 +61,11 @@ const IngredientsSection = () => {
             <br />
             OUR INGREDIENTS
           </h1>
-          <p>
+          {/* <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta
             ducimus possimus, beatae corporis doloribus fuga at quas velit.
             Dolore, repellendus officia? Voluptates saepe alias maxime.
-          </p>
+          </p> */}
         </div>
       </CustomContainer>
       <br />
