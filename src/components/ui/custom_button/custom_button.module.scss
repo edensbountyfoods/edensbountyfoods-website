@@ -2,8 +2,8 @@
   // background-color: red;
   padding: 5px 50px;
   border: none;
-  border-radius: 40px;
-  font-size: 35px;
+  border-radius: 16px;
+  font-size: 30px;
   font-weight: 500;
   height: fit-content !important;
   border: 1px solid transparent;
@@ -28,6 +28,16 @@
     &:hover {
       background-color: $color_p1;
       color: white;
+    }
+  }
+  &.v_3 {
+    background-color: white;
+    color: $color_p1;
+
+    &:hover {
+      background-color: $color_p1;
+      color: white;
+      border-color: white;
     }
   }
 

@@ -2,9 +2,10 @@ import CustomContainer from "@/components/ui/custom_container/custom_container";
 import CustomSection from "@/components/ui/custom_section/custom_section";
 import React, { useRef } from "react";
 import styles from "./flavours.module.scss";
-import Image from "next/image";
+
 import Link from "next/link";
 import { useInView, motion } from "framer-motion";
+import { Image } from "react-bootstrap";
 
 const FlavoursSection = ({ products }) => {
   const flavours = [
@@ -96,7 +97,6 @@ const FlavoursSection = ({ products }) => {
                       }
                       alt={flavour.name}
                       height={120}
-                      width={120}
                       // height='auto'
                     />
                     <p>{flavour.name}</p>

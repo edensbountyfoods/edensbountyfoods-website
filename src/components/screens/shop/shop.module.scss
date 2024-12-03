@@ -1,6 +1,7 @@
 .ShopScreen {
   .wrap {
     position: relative;
+    z-index: 10;
 
     .bg {
       background-image: url("/assets/zebra_bg.jpg");

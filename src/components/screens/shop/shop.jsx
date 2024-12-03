@@ -5,6 +5,7 @@ import { useRouter } from "next/router";
 import { Col, Image, Row } from "react-bootstrap";
 import Link from "next/link";
 import CustomButton from "@/components/ui/custom_button/custom_button";
+import NewShop from "./new_shop/new_shop";
 
 const ShopScreen = ({ products, addToCart }) => {
   const router = useRouter();
@@ -28,14 +29,19 @@ const ShopScreen = ({ products, addToCart }) => {
     return (
       <div
         className={styles.ShopScreen}
-        style={{
-          backgroundColor: currentProduct?.color,
-        }}
+        // style={{
+        //   backgroundColor: currentProduct?.color,
+        // }}
       >
         <div className={styles.wrap}>
           <div className={styles.bg} />
           <CustomContainer>
-            {currentProduct?.isDrink && (
+            <NewShop
+              product={currentProduct}
+              allProducts={products}
+              addToCart={addToCart}
+            />
+            {/*          
               <div className={styles.cont}>
                 <h1>{currentProduct.name}</h1>
                 <Image
@@ -44,31 +50,7 @@ const ShopScreen = ({ products, addToCart }) => {
                   alt={currentProduct.name}
                 />
                 <div className={styles.bottom}>
-                  <div className={styles.left}>
-                    {/* <h3>Other Flavours</h3> */}
-                    <Row>
-                      {products
-                        .filter((p) => p.id !== currentProduct.id)
-                        .map((op) => {
-                          if (op.isDrink) {
-                            return (
-                              <Col key={op.id}>
-                                <div className={styles.op}>
-                                  <Link href={`/shop/${op.id}`}>
-                                    <Image
-                                      src={op.imageUrl}
-                                      alt={op.name}
-                                      width={50}
-                                    />
-                                    <p>{op.name}</p>
-                                  </Link>
-                                </div>
-                              </Col>
-                            );
-                          }
-                        })}
-                    </Row>
-                  </div>
+                
 
                   <div className={styles.right}>
                     <h2>Rs.{currentProduct.price}/-</h2>
@@ -84,8 +66,7 @@ const ShopScreen = ({ products, addToCart }) => {
                     </CustomButton>
                   </div>
                 </div>
-              </div>
-            )}
+              </div> */}
           </CustomContainer>
         </div>
       </div>

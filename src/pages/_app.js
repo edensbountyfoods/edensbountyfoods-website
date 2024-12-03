@@ -3,8 +3,9 @@ import "aos/dist/aos.css";
 import Layout from "@/components/layout/layout";
 import fonts from "@/styles/fonts/fonts";
 import styles from "../styles/Home.module.scss";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Head from "next/head";
+import Aos from "aos";
 
 export default function App({ Component, pageProps }) {
   const [cartItems, setCartItems] = useState([]);
@@ -17,14 +18,24 @@ export default function App({ Component, pageProps }) {
       imageUrl: "/images/products/papa_passion.png",
       price: 25,
       isDrink: true,
+      oldPrice: 30,
+      ingredients:
+        "Water, lychee pulp, sugar, Nata de Coco, fermented coconut water jelly, natural flavors",
+      description:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, magnam quo aliquam consequuntur porro doloribus dolore tempore molestiae repudiandae nostrum. Distinctio nemo fugit esse aliquid voluptatum culpa aperiam, laboriosam earum.",
     },
     {
-      id: "strawberry",
-      name: "Strawberry",
+      id: "basil_lychee",
+      name: "Basil Lychee",
       color: "#e8110b",
-      imageUrl: "/images/products/strawberry.png",
+      imageUrl: "/images/products/lala_lychee.png",
       price: 25,
       isDrink: true,
+      oldPrice: 30,
+      ingredients:
+        "Water, lychee pulp, sugar, Nata de Coco, fermented coconut water jelly, natural flavors",
+      description:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, magnam quo aliquam consequuntur porro doloribus dolore tempore molestiae repudiandae nostrum. Distinctio nemo fugit esse aliquid voluptatum culpa aperiam, laboriosam earum.",
     },
     {
       id: "lychee",
@@ -33,6 +44,11 @@ export default function App({ Component, pageProps }) {
       imageUrl: "/images/products/lala_lychee.png",
       price: 25,
       isDrink: true,
+      oldPrice: 30,
+      ingredients:
+        "Water, lychee pulp, sugar, Nata de Coco, fermented coconut water jelly, natural flavors",
+      description:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, magnam quo aliquam consequuntur porro doloribus dolore tempore molestiae repudiandae nostrum. Distinctio nemo fugit esse aliquid voluptatum culpa aperiam, laboriosam earum.",
     },
     {
       id: "tapioca_chips",
@@ -41,6 +57,11 @@ export default function App({ Component, pageProps }) {
       imageUrl: "/images/products/nendharam_chips.png",
 
       price: 25,
+      oldPrice: 30,
+      ingredients:
+        "Water, lychee pulp, sugar, Nata de Coco, fermented coconut water jelly, natural flavors",
+      description:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, magnam quo aliquam consequuntur porro doloribus dolore tempore molestiae repudiandae nostrum. Distinctio nemo fugit esse aliquid voluptatum culpa aperiam, laboriosam earum.",
     },
     {
       id: "nendharam_chips",
@@ -48,6 +69,11 @@ export default function App({ Component, pageProps }) {
       color: "#fa5e93",
       imageUrl: "/images/products/nendharam_chips.png",
       price: 25,
+      oldPrice: 30,
+      ingredients:
+        "Water, lychee pulp, sugar, Nata de Coco, fermented coconut water jelly, natural flavors",
+      description:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, magnam quo aliquam consequuntur porro doloribus dolore tempore molestiae repudiandae nostrum. Distinctio nemo fugit esse aliquid voluptatum culpa aperiam, laboriosam earum.",
     },
   ];
 
@@ -64,6 +90,13 @@ export default function App({ Component, pageProps }) {
       });
     }
   };
+
+  useEffect(() => {
+    Aos.init({
+      duration: 750,
+      once: false,
+    });
+  }, []);
 
   return (
     <>

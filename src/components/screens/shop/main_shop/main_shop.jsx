@@ -2,15 +2,67 @@ import CustomContainer from "@/components/ui/custom_container/custom_container";
 import React, { useState } from "react";
 import styles from "./main_shop.module.scss";
 import { Col, Image, Row } from "react-bootstrap";
-import CustomButton from "@/components/ui/custom_button/custom_button";
 import Link from "next/link";
+import { StarFill } from "react-bootstrap-icons";
+import CustomButton from "@/components/ui/custom_button/custom_button";
 
 const Product = ({ product, addToCart }) => {
   const [isAdded, setIsAdded] = useState(false);
 
   return (
-    <Col key={product.id} xs={6} md={4}>
-      <div className={styles.product}>
+    <Col key={product.id} xs={12} md={4} lg={4}>
+      <Link href={`/shop/${product.id}`}>
+        <div className={styles.product} data-aos='zoom-in'>
+          <div
+            className={styles.img}
+            style={{
+              backgroundColor: product.color,
+            }}
+          >
+            <Image src={product.imageUrl} alt={product.name} height={300} />
+          </div>
+          <div className={styles.bot}>
+            <h2
+              style={{
+                color: product.color,
+              }}
+            >
+              {product.name}
+            </h2>
+
+            <div className={styles.price}>
+              <div className={styles.text}>
+                <strike>Rs.{product.oldPrice}</strike>
+                <h3>Rs.{product.price}</h3>
+              </div>
+              <div className={styles.stars}>
+                <StarFill />
+                <StarFill />
+                <StarFill />
+                <StarFill />
+                <StarFill />
+              </div>
+            </div>
+            <div className={styles.desc}>
+              <p>{product.description}</p>
+            </div>
+
+            <div
+              onClick={(e) => {
+                e.stopPropagation()
+                e.preventDefault()
+                addToCart(product);
+                setIsAdded(true);
+              }}
+              className={styles.add}
+            >
+              {isAdded ? "Added to cart" : "Add to cart"}
+            </div>
+          </div>
+        </div>
+      </Link>
+
+      {/* <div className={styles.product}>
         <div
           className={styles.bg}
           style={{
@@ -44,12 +96,12 @@ const Product = ({ product, addToCart }) => {
         >
           {isAdded ? "Added to cart" : "Add to cart"}
         </div>
-      </div>
+      </div> */}
     </Col>
   );
 };
 
-const ManiShop = ({ products, addToCart }) => {
+const MainShop = ({ products, addToCart }) => {
   return (
     <div className={styles.MainShop}>
       <div className={styles.bg} />
@@ -77,4 +129,4 @@ const ManiShop = ({ products, addToCart }) => {
   );
 };
 
-export default ManiShop;
+export default MainShop;

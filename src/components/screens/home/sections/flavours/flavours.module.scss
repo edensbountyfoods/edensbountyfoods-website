@@ -24,23 +24,37 @@
   }
 
   .wrap {
-    display: flex;
-    gap: 50px;
+    // display: flex;
+    // gap: 50px;
     justify-content: space-around;
     flex-wrap: wrap;
     padding: 0 25px;
+    display: grid;
+    grid-template-columns: repeat(5, 20%);
 
     .flavour {
       text-align: center;
       position: relative;
+      padding: 36px 0;
 
       p {
-        font-size: 30px;
+        font-size: 16px !important;
+        text-wrap: wrap;
       }
 
       &:hover {
         transform: scale(1.1);
       }
+    }
+
+    @include respond-below(xl) {
+      grid-template-columns: repeat(4, 25%);
+    }
+    @include respond-below(lg) {
+      grid-template-columns: repeat(3, 33%);
+    }
+    @include respond-below(md) {
+      grid-template-columns: repeat(2, 50%);
     }
   }
 }

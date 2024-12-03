@@ -1,0 +1,135 @@
+.NewShop {
+  padding: 150px 0 50px 0px;
+  position: relative;
+  z-index: 10;
+
+  .box {
+    margin-bottom: 20px;
+    @include flexCenter;
+    border-radius: 20px;
+    padding: 20px;
+    position: relative;
+    z-index: 10;
+
+    .bgb {
+      background-image: url("/assets/zebra_bg.jpg");
+      background-size: cover;
+      opacity: 0.02;
+      position: absolute;
+      left: 0;
+      right: 0;
+      height: 100%;
+      width: 100%;
+      z-index: 1;
+    }
+  }
+
+  .right {
+    h2 {
+      background-color: $color_p3;
+      width: fit-content;
+      padding: 0 20px;
+      margin-bottom: 30px;
+      font-size: 30px;
+      border-radius: 10px;
+    }
+    h1 {
+      font-size: 60px;
+      line-height: 60px;
+    }
+
+    .desc {
+      p {
+        font-size: 16px !important;
+      }
+    }
+
+    .stars {
+      svg {
+        margin: 0 1px;
+      }
+      * {
+        color: rgb(255, 208, 0);
+      }
+    }
+
+    .price {
+      display: flex;
+      //   justify-content: space-between;
+      gap: 20px;
+      align-items: center;
+      height: fit-content;
+
+      .text {
+        strike {
+          color: rgb(213, 0, 0);
+          font-size: 24px;
+        }
+      }
+      h3 {
+        // color: black;
+        margin-top: -10px;
+        font-size: 35px;
+      }
+    }
+
+    .ingredients {
+      display: flex;
+      flex-wrap: wrap;
+      margin-top: 12px;
+      > div {
+        background-color: $color_p2;
+        h3 {
+          color: $color_p1;
+          font-size: 19px !important;
+        }
+        margin: 5px 16px 5px 0;
+        padding: 4px 20px;
+        border-radius: 20px;
+      }
+    }
+  }
+
+  .otherProducts {
+    margin-top: 30px;
+
+    .top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .wrap {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+
+      > a {
+        flex-grow: 1;
+        margin-top: 20px;
+        // width: 100px;
+        border: 1px solid rgba(255, 255, 255, 0.449);
+        @include flexCenter;
+        padding: 20px;
+        border-radius: 10px;
+        opacity: 0.8;
+
+        &:hover {
+          border-color: white;
+          opacity: 1;
+        }
+      }
+
+      @include respond-below(md) {
+        gap: 10px;
+        margin-top: 20px;
+
+        > a {
+          margin-top: 0;
+          width: 100px;
+          flex-grow: unset;
+        }
+      }
+    }
+  }
+}
